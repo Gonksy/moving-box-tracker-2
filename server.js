@@ -22,7 +22,7 @@ mongoose.connect(dbConnectionStr, {
   process.exit();
 });
 
-require('./app/routes/note.routes.js')(app);
+require('./app/routes/box.routes.js')(app);
 
 app.listen(process.env.PORT || PORT, () => {
   console.log(`Listening on ${process.env.PORT || PORT} and attempting to connect to ${process.env.DB_STRING}`)

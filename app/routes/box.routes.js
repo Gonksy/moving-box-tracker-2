@@ -7,22 +7,22 @@ module.exports = (app) => {
   
   
   // Create a new box
-  app.post('/boxes', boxes.create);
+  app.post('/boxes', boxes.createBox);
 
-  // Delete a box with boxId
-  app.delete('/boxes/:boxId', boxes.deleteOne);
+  // // Delete a box with boxId
+  // app.delete('/boxes/:boxId', boxes.deleteBox);
 
-  // Rename a box with boxId
-  app.put('/boxes/:boxId', boxes.update)
+  // // Rename a box with boxId
+  // app.put('/boxes/:boxId', boxes.updateBox);
 
 
 
   // Create a new item
-  app.post('/boxes/:boxId/items', items.create)
+  app.put('/boxes/:boxId/', boxes.createItem);
 
   // Delete an item with itemId
-  app.delete('/boxes/:boxId/:itemId', items.deleteOne)
+  // app.delete('/boxes/:boxId/:itemId', boxes.deleteItem);
 
-  // Edit an item with itemId
-  app.put('/boxes/:boxId/:itemId', items.update)
+  // // Edit an item with itemId
+  // app.put('/boxes/:boxId/:itemId', boxes.updateItem);
 }
